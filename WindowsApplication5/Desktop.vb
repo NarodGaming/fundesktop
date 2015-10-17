@@ -31,35 +31,36 @@
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         SetupTaskBar("File Browser")
+        FileBrowser.Show()
     End Sub
 
     '' Button6 - Button14 works as the buttons the start menu - for example the web browser being open etc.
 
     Public Function SetupTaskBar(ByVal nameofwindow As String)
         If nameofwindow = "File Browser" Then
-            If ButtonOn = "6" Then
-                SendNum(6, nameofwindow)
-            End If
-            If ButtonOn = "7" Then
-                SendNum(7, nameofwindow)
-            End If
-            If ButtonOn = "8" Then
-                SendNum(8, nameofwindow)
-            End If
-            If ButtonOn = "9" Then
-                SendNum(9, nameofwindow)
-            End If
-            If ButtonOn = "10" Then
-                SendNum(10, nameofwindow)
-            End If
-            If ButtonOn = "11" Then
-                SendNum(11, nameofwindow)
+            If ButtonOn = "13" Then
+                SendNum(13, nameofwindow)
             End If
             If ButtonOn = "12" Then
                 SendNum(12, nameofwindow)
             End If
-            If ButtonOn = "13" Then
-                SendNum(13, nameofwindow)
+            If ButtonOn = "11" Then
+                SendNum(11, nameofwindow)
+            End If
+            If ButtonOn = "10" Then
+                SendNum(10, nameofwindow)
+            End If
+            If ButtonOn = "9" Then
+                SendNum(9, nameofwindow)
+            End If
+            If ButtonOn = "8" Then
+                SendNum(8, nameofwindow)
+            End If
+            If ButtonOn = "7" Then
+                SendNum(7, nameofwindow)
+            End If
+            If ButtonOn = "6" Then
+                SendNum(6, nameofwindow)
             End If
         End If
     End Function
