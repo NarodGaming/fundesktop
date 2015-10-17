@@ -5,7 +5,7 @@
     Private Sub StartButton_Click(sender As Object, e As EventArgs) Handles StartButton.Click
         If StartOpen = False Then
             StartPanel.Visible = True
-            StartPanel.Location = New Point(StartButton.Location.X, StartButton.Location.Y - StartPanel.Height + 5)
+            StartPanel.Location = New Point(StartButton.Location.X, StartButton.Location.Y - StartPanel.Height)
             StartOpen = True
         Else
             StartPanel.Visible = False
@@ -18,24 +18,32 @@
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles shutdownButton.Click
         Application.Exit()
 
 
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles FBrowser_btn.Click
         If FunkyBrowser.Visible = False Then
             SetupTaskBar("Funky Browser")
             FunkyBrowser.Show()
+            StartPanel.Visible = False
+            StartOpen = False
+        Else
+            FileBrowser.Focus()
         End If
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles myComputer_btn.Click
         If FileBrowser.Visible = False Then
             SetupTaskBar("File Browser")
             FileBrowser.Show()
+            StartPanel.Visible = False
+            StartOpen = False
+        Else
+            FileBrowser.Focus()
         End If
     End Sub
 
@@ -178,4 +186,48 @@
             ButtonOn = ButtonOn - 1
         End If
     End Function
+
+    Private Sub Desktop_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.FormBorderStyle = FormBorderStyle.None
+        Me.WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub DesktopBackground_Click(sender As Object, e As EventArgs) Handles DesktopBackground.Click
+        If StartOpen = True Then
+            StartPanel.Visible = False
+            StartOpen = False
+        End If
+    End Sub
+
+    Private Sub TimeTimer_Tick(sender As Object, e As EventArgs) Handles TimeTimer.Tick
+        Time.Text = DateAndTime.Now.ToString
+    End Sub
+
+    Private Sub Panel1_Click(sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Panel1.Click
+        If e.Button = MouseButtons.Right Then
+            TaskBarRightclick.Show(Me, New Point(Cursor.Position.X, Cursor.Position.Y))
+        End If
+    End Sub
+
+    Private Sub TaskManagerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TaskManagerToolStripMenuItem.Click
+        If TaskManager.Visible = False Then
+            SetupTaskBar("Task Manager")
+            TaskManager.Show()
+            StartPanel.Visible = False
+            StartOpen = False
+        Else
+            TaskManager.Focus()
+        End If
+    End Sub
+
+    Private Sub aboutButton_Click(sender As Object, e As EventArgs) Handles aboutButton.Click
+        If AboutFunDesktopOS.Visible = False Then
+            SetupTaskBar("About")
+            AboutFunDesktopOS.Show()
+            StartPanel.Visible = False
+            StartOpen = False
+        Else
+            AboutFunDesktopOS.Focus()
+        End If
+    End Sub
 End Class

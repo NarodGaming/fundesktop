@@ -79,6 +79,7 @@ Partial Class FileBrowser
         Me.Controls.Add(Me.ComboBox1)
         Me.Name = "FileBrowser"
         Me.Text = "File Browser"
+        Me.TopMost = True
         Me.ResumeLayout(False)
 
     End Sub

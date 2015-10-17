@@ -105,6 +105,7 @@ Partial Class FunkyBrowser
         Me.Controls.Add(Me.WebBrowser1)
         Me.Name = "FunkyBrowser"
         Me.Text = "FunkyBrowser"
+        Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

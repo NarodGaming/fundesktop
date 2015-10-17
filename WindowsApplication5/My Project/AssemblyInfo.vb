@@ -8,12 +8,12 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("WindowsApplication5")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("WindowsApplication5")>
-<Assembly: AssemblyCopyright("Copyright ©  2015")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyTitle("Fun Desktop")>
+<Assembly: AssemblyDescription("A fun desktop made in Visual Studio")>
+<Assembly: AssemblyCompany("Arron Faulkner & Jamie Davies")>
+<Assembly: AssemblyProduct("FunDesktopOS")>
+<Assembly: AssemblyCopyright("Copyright © AFJD  2015")>
+<Assembly: AssemblyTrademark("AFJD, FunDesktop and FunDesktopOS are all trademarks of AFJD.")>
 
 <Assembly: ComVisible(False)>
 

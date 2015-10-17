@@ -22,17 +22,21 @@ Partial Class Desktop
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Desktop))
         Me.StartPanel = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.aboutButton = New System.Windows.Forms.Button()
+        Me.ShutdownArrow = New System.Windows.Forms.Button()
+        Me.FBrowser_btn = New System.Windows.Forms.Button()
+        Me.userPhoto = New System.Windows.Forms.PictureBox()
+        Me.userName = New System.Windows.Forms.Label()
+        Me.myDocuments_btn = New System.Windows.Forms.Button()
+        Me.myComputer_btn = New System.Windows.Forms.Button()
+        Me.shutdownButton = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.StartButton = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Time = New System.Windows.Forms.Label()
         Me.Button14 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button13 = New System.Windows.Forms.Button()
@@ -42,20 +46,31 @@ Partial Class Desktop
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
+        Me.TimeTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.TaskBarRightclick = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.TaskManagerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.TaskBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PropertiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DesktopBackground = New System.Windows.Forms.PictureBox()
         Me.StartPanel.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.userPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.TaskBarRightclick.SuspendLayout()
+        CType(Me.DesktopBackground, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StartPanel
         '
-        Me.StartPanel.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.StartPanel.Controls.Add(Me.Button3)
-        Me.StartPanel.Controls.Add(Me.PictureBox1)
-        Me.StartPanel.Controls.Add(Me.Label1)
-        Me.StartPanel.Controls.Add(Me.Button5)
-        Me.StartPanel.Controls.Add(Me.Button4)
-        Me.StartPanel.Controls.Add(Me.Button2)
+        Me.StartPanel.BackColor = System.Drawing.Color.Silver
+        Me.StartPanel.Controls.Add(Me.aboutButton)
+        Me.StartPanel.Controls.Add(Me.ShutdownArrow)
+        Me.StartPanel.Controls.Add(Me.FBrowser_btn)
+        Me.StartPanel.Controls.Add(Me.userPhoto)
+        Me.StartPanel.Controls.Add(Me.userName)
+        Me.StartPanel.Controls.Add(Me.myDocuments_btn)
+        Me.StartPanel.Controls.Add(Me.myComputer_btn)
+        Me.StartPanel.Controls.Add(Me.shutdownButton)
         Me.StartPanel.Controls.Add(Me.Button1)
         Me.StartPanel.Location = New System.Drawing.Point(0, 153)
         Me.StartPanel.Name = "StartPanel"
@@ -63,60 +78,78 @@ Partial Class Desktop
         Me.StartPanel.TabIndex = 0
         Me.StartPanel.Visible = False
         '
-        'Button3
+        'aboutButton
         '
-        Me.Button3.Location = New System.Drawing.Point(3, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(189, 36)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "FunkyBrowser"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.aboutButton.Location = New System.Drawing.Point(3, 455)
+        Me.aboutButton.Name = "aboutButton"
+        Me.aboutButton.Size = New System.Drawing.Size(127, 25)
+        Me.aboutButton.TabIndex = 7
+        Me.aboutButton.Text = "About FunDesktopOS"
+        Me.aboutButton.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'ShutdownArrow
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(198, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(86, 93)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 5
-        Me.PictureBox1.TabStop = False
+        Me.ShutdownArrow.Location = New System.Drawing.Point(258, 445)
+        Me.ShutdownArrow.Name = "ShutdownArrow"
+        Me.ShutdownArrow.Size = New System.Drawing.Size(29, 35)
+        Me.ShutdownArrow.TabIndex = 6
+        Me.ShutdownArrow.Text = ">"
+        Me.ShutdownArrow.UseVisualStyleBackColor = True
         '
-        'Label1
+        'FBrowser_btn
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(227, 99)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(29, 13)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "User"
+        Me.FBrowser_btn.Location = New System.Drawing.Point(3, 3)
+        Me.FBrowser_btn.Name = "FBrowser_btn"
+        Me.FBrowser_btn.Size = New System.Drawing.Size(189, 36)
+        Me.FBrowser_btn.TabIndex = 2
+        Me.FBrowser_btn.Text = "Funky Browser"
+        Me.FBrowser_btn.UseVisualStyleBackColor = True
         '
-        'Button5
+        'userPhoto
         '
-        Me.Button5.Location = New System.Drawing.Point(199, 115)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(85, 40)
-        Me.Button5.TabIndex = 3
-        Me.Button5.Text = "Documents"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.userPhoto.Image = Global.FunDesktopOS.My.Resources.Resources.guestIcon
+        Me.userPhoto.Location = New System.Drawing.Point(197, 3)
+        Me.userPhoto.Name = "userPhoto"
+        Me.userPhoto.Size = New System.Drawing.Size(87, 93)
+        Me.userPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.userPhoto.TabIndex = 5
+        Me.userPhoto.TabStop = False
         '
-        'Button4
+        'userName
         '
-        Me.Button4.Location = New System.Drawing.Point(197, 185)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(87, 48)
-        Me.Button4.TabIndex = 2
-        Me.Button4.Text = "My Computer"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.userName.AutoSize = True
+        Me.userName.Location = New System.Drawing.Point(227, 99)
+        Me.userName.Name = "userName"
+        Me.userName.Size = New System.Drawing.Size(29, 13)
+        Me.userName.TabIndex = 4
+        Me.userName.Text = "User"
         '
-        'Button2
+        'myDocuments_btn
         '
-        Me.Button2.Location = New System.Drawing.Point(158, 448)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(129, 37)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Shutdown"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.myDocuments_btn.Location = New System.Drawing.Point(197, 128)
+        Me.myDocuments_btn.Name = "myDocuments_btn"
+        Me.myDocuments_btn.Size = New System.Drawing.Size(85, 40)
+        Me.myDocuments_btn.TabIndex = 3
+        Me.myDocuments_btn.Text = "Documents"
+        Me.myDocuments_btn.UseVisualStyleBackColor = True
+        '
+        'myComputer_btn
+        '
+        Me.myComputer_btn.Location = New System.Drawing.Point(197, 185)
+        Me.myComputer_btn.Name = "myComputer_btn"
+        Me.myComputer_btn.Size = New System.Drawing.Size(87, 48)
+        Me.myComputer_btn.TabIndex = 2
+        Me.myComputer_btn.Text = "My Computer"
+        Me.myComputer_btn.UseVisualStyleBackColor = True
+        '
+        'shutdownButton
+        '
+        Me.shutdownButton.Location = New System.Drawing.Point(136, 444)
+        Me.shutdownButton.Name = "shutdownButton"
+        Me.shutdownButton.Size = New System.Drawing.Size(129, 37)
+        Me.shutdownButton.TabIndex = 1
+        Me.shutdownButton.Text = "Shutdown"
+        Me.shutdownButton.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -129,16 +162,21 @@ Partial Class Desktop
         '
         'StartButton
         '
-        Me.StartButton.Location = New System.Drawing.Point(0, 644)
+        Me.StartButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.StartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.StartButton.Location = New System.Drawing.Point(0, 642)
         Me.StartButton.Name = "StartButton"
-        Me.StartButton.Size = New System.Drawing.Size(76, 41)
+        Me.StartButton.Size = New System.Drawing.Size(104, 39)
         Me.StartButton.TabIndex = 1
         Me.StartButton.Text = "Start"
         Me.StartButton.UseVisualStyleBackColor = True
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Desktop
+        Me.Panel1.Controls.Add(Me.Time)
         Me.Panel1.Controls.Add(Me.Button14)
         Me.Panel1.Controls.Add(Me.Button6)
         Me.Panel1.Controls.Add(Me.Button13)
@@ -148,14 +186,25 @@ Partial Class Desktop
         Me.Panel1.Controls.Add(Me.Button10)
         Me.Panel1.Controls.Add(Me.Button11)
         Me.Panel1.Controls.Add(Me.Button9)
-        Me.Panel1.Location = New System.Drawing.Point(0, 642)
+        Me.Panel1.Location = New System.Drawing.Point(97, 642)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1264, 42)
+        Me.Panel1.Size = New System.Drawing.Size(1167, 42)
         Me.Panel1.TabIndex = 3
+        '
+        'Time
+        '
+        Me.Time.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Time.AutoSize = True
+        Me.Time.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Time.Location = New System.Drawing.Point(923, 8)
+        Me.Time.Name = "Time"
+        Me.Time.Size = New System.Drawing.Size(244, 24)
+        Me.Time.TabIndex = 12
+        Me.Time.Text = "DD/MM/YYYY HH:MM:SS"
         '
         'Button14
         '
-        Me.Button14.Location = New System.Drawing.Point(878, 0)
+        Me.Button14.Location = New System.Drawing.Point(803, 0)
         Me.Button14.Name = "Button14"
         Me.Button14.Size = New System.Drawing.Size(90, 39)
         Me.Button14.TabIndex = 11
@@ -165,7 +214,7 @@ Partial Class Desktop
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(110, 0)
+        Me.Button6.Location = New System.Drawing.Point(39, 0)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(90, 39)
         Me.Button6.TabIndex = 0
@@ -175,7 +224,7 @@ Partial Class Desktop
         '
         'Button13
         '
-        Me.Button13.Location = New System.Drawing.Point(782, 0)
+        Me.Button13.Location = New System.Drawing.Point(707, 0)
         Me.Button13.Name = "Button13"
         Me.Button13.Size = New System.Drawing.Size(90, 39)
         Me.Button13.TabIndex = 10
@@ -185,7 +234,7 @@ Partial Class Desktop
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(206, 0)
+        Me.Button7.Location = New System.Drawing.Point(133, 0)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(90, 39)
         Me.Button7.TabIndex = 4
@@ -195,7 +244,7 @@ Partial Class Desktop
         '
         'Button12
         '
-        Me.Button12.Location = New System.Drawing.Point(686, 0)
+        Me.Button12.Location = New System.Drawing.Point(611, 0)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(90, 39)
         Me.Button12.TabIndex = 9
@@ -205,7 +254,7 @@ Partial Class Desktop
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(302, 0)
+        Me.Button8.Location = New System.Drawing.Point(229, 0)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(90, 39)
         Me.Button8.TabIndex = 5
@@ -215,7 +264,7 @@ Partial Class Desktop
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(494, 0)
+        Me.Button10.Location = New System.Drawing.Point(419, 0)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(90, 39)
         Me.Button10.TabIndex = 7
@@ -225,7 +274,7 @@ Partial Class Desktop
         '
         'Button11
         '
-        Me.Button11.Location = New System.Drawing.Point(590, 0)
+        Me.Button11.Location = New System.Drawing.Point(515, 0)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(90, 39)
         Me.Button11.TabIndex = 8
@@ -235,13 +284,61 @@ Partial Class Desktop
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(398, 0)
+        Me.Button9.Location = New System.Drawing.Point(323, 0)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(90, 39)
         Me.Button9.TabIndex = 6
         Me.Button9.Text = "Button9"
         Me.Button9.UseVisualStyleBackColor = True
         Me.Button9.Visible = False
+        '
+        'TimeTimer
+        '
+        Me.TimeTimer.Enabled = True
+        '
+        'TaskBarRightclick
+        '
+        Me.TaskBarRightclick.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TaskManagerToolStripMenuItem, Me.ToolStripSeparator1, Me.TaskBarToolStripMenuItem, Me.PropertiesToolStripMenuItem})
+        Me.TaskBarRightclick.Name = "TaskBarRightclick"
+        Me.TaskBarRightclick.Size = New System.Drawing.Size(163, 76)
+        '
+        'TaskManagerToolStripMenuItem
+        '
+        Me.TaskManagerToolStripMenuItem.Name = "TaskManagerToolStripMenuItem"
+        Me.TaskManagerToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.TaskManagerToolStripMenuItem.Text = "Task Manager"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(159, 6)
+        '
+        'TaskBarToolStripMenuItem
+        '
+        Me.TaskBarToolStripMenuItem.Checked = True
+        Me.TaskBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.TaskBarToolStripMenuItem.Name = "TaskBarToolStripMenuItem"
+        Me.TaskBarToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.TaskBarToolStripMenuItem.Text = "Lock the Taskbar"
+        '
+        'PropertiesToolStripMenuItem
+        '
+        Me.PropertiesToolStripMenuItem.Name = "PropertiesToolStripMenuItem"
+        Me.PropertiesToolStripMenuItem.Size = New System.Drawing.Size(162, 22)
+        Me.PropertiesToolStripMenuItem.Text = "Properties"
+        '
+        'DesktopBackground
+        '
+        Me.DesktopBackground.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DesktopBackground.Image = CType(resources.GetObject("DesktopBackground.Image"), System.Drawing.Image)
+        Me.DesktopBackground.Location = New System.Drawing.Point(0, 1)
+        Me.DesktopBackground.Name = "DesktopBackground"
+        Me.DesktopBackground.Size = New System.Drawing.Size(1264, 650)
+        Me.DesktopBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.DesktopBackground.TabIndex = 4
+        Me.DesktopBackground.TabStop = False
         '
         'Desktop
         '
@@ -252,25 +349,29 @@ Partial Class Desktop
         Me.Controls.Add(Me.StartButton)
         Me.Controls.Add(Me.StartPanel)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.DesktopBackground)
         Me.Name = "Desktop"
         Me.Text = "Desktop"
         Me.StartPanel.ResumeLayout(False)
         Me.StartPanel.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.userPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.TaskBarRightclick.ResumeLayout(False)
+        CType(Me.DesktopBackground, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents StartPanel As Panel
     Friend WithEvents StartButton As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents shutdownButton As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents userPhoto As PictureBox
+    Friend WithEvents userName As Label
+    Friend WithEvents myDocuments_btn As Button
+    Friend WithEvents myComputer_btn As Button
+    Friend WithEvents FBrowser_btn As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Button14 As Button
     Friend WithEvents Button6 As Button
@@ -281,4 +382,14 @@ Partial Class Desktop
     Friend WithEvents Button10 As Button
     Friend WithEvents Button11 As Button
     Friend WithEvents Button9 As Button
+    Friend WithEvents ShutdownArrow As Button
+    Friend WithEvents DesktopBackground As PictureBox
+    Friend WithEvents Time As Label
+    Friend WithEvents TimeTimer As Timer
+    Friend WithEvents TaskBarRightclick As ContextMenuStrip
+    Friend WithEvents TaskManagerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents TaskBarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PropertiesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents aboutButton As Button
 End Class
