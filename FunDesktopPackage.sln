@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.22823.1
+# Visual Studio Express 14 for Windows Desktop
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WindowsApplication5", "WindowsApplication5\WindowsApplication5.vbproj", "{EC3AF5A7-5E49-4A9F-AA4A-306B007D48E6}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "FunDesktopOS", "WindowsApplication5\FunDesktopOS.vbproj", "{EC3AF5A7-5E49-4A9F-AA4A-306B007D48E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
