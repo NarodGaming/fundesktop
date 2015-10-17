@@ -33,15 +33,15 @@ Partial Class Desktop
         Me.Button1 = New System.Windows.Forms.Button()
         Me.StartButton = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button14 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
-        Me.Button14 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.StartPanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -153,6 +153,16 @@ Partial Class Desktop
         Me.Panel1.Size = New System.Drawing.Size(1264, 42)
         Me.Panel1.TabIndex = 3
         '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(878, 0)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(90, 39)
+        Me.Button14.TabIndex = 11
+        Me.Button14.Text = "Button14"
+        Me.Button14.UseVisualStyleBackColor = True
+        Me.Button14.Visible = False
+        '
         'Button6
         '
         Me.Button6.Location = New System.Drawing.Point(110, 0)
@@ -162,6 +172,16 @@ Partial Class Desktop
         Me.Button6.Text = "Button6"
         Me.Button6.UseVisualStyleBackColor = True
         Me.Button6.Visible = False
+        '
+        'Button13
+        '
+        Me.Button13.Location = New System.Drawing.Point(782, 0)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(90, 39)
+        Me.Button13.TabIndex = 10
+        Me.Button13.Text = "Button13"
+        Me.Button13.UseVisualStyleBackColor = True
+        Me.Button13.Visible = False
         '
         'Button7
         '
@@ -173,6 +193,16 @@ Partial Class Desktop
         Me.Button7.UseVisualStyleBackColor = True
         Me.Button7.Visible = False
         '
+        'Button12
+        '
+        Me.Button12.Location = New System.Drawing.Point(686, 0)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(90, 39)
+        Me.Button12.TabIndex = 9
+        Me.Button12.Text = "Button12"
+        Me.Button12.UseVisualStyleBackColor = True
+        Me.Button12.Visible = False
+        '
         'Button8
         '
         Me.Button8.Location = New System.Drawing.Point(302, 0)
@@ -182,16 +212,6 @@ Partial Class Desktop
         Me.Button8.Text = "Button8"
         Me.Button8.UseVisualStyleBackColor = True
         Me.Button8.Visible = False
-        '
-        'Button9
-        '
-        Me.Button9.Location = New System.Drawing.Point(398, 0)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(90, 39)
-        Me.Button9.TabIndex = 6
-        Me.Button9.Text = "Button9"
-        Me.Button9.UseVisualStyleBackColor = True
-        Me.Button9.Visible = False
         '
         'Button10
         '
@@ -213,35 +233,15 @@ Partial Class Desktop
         Me.Button11.UseVisualStyleBackColor = True
         Me.Button11.Visible = False
         '
-        'Button12
+        'Button9
         '
-        Me.Button12.Location = New System.Drawing.Point(686, 0)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(90, 39)
-        Me.Button12.TabIndex = 9
-        Me.Button12.Text = "Button12"
-        Me.Button12.UseVisualStyleBackColor = True
-        Me.Button12.Visible = False
-        '
-        'Button13
-        '
-        Me.Button13.Location = New System.Drawing.Point(782, 0)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(90, 39)
-        Me.Button13.TabIndex = 10
-        Me.Button13.Text = "Button13"
-        Me.Button13.UseVisualStyleBackColor = True
-        Me.Button13.Visible = False
-        '
-        'Button14
-        '
-        Me.Button14.Location = New System.Drawing.Point(878, 0)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(90, 39)
-        Me.Button14.TabIndex = 11
-        Me.Button14.Text = "Button14"
-        Me.Button14.UseVisualStyleBackColor = True
-        Me.Button14.Visible = False
+        Me.Button9.Location = New System.Drawing.Point(398, 0)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(90, 39)
+        Me.Button9.TabIndex = 6
+        Me.Button9.Text = "Button9"
+        Me.Button9.UseVisualStyleBackColor = True
+        Me.Button9.Visible = False
         '
         'Desktop
         '
