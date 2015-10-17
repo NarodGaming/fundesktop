@@ -65,9 +65,9 @@ Partial Class Desktop
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(199, 367)
+        Me.Button3.Location = New System.Drawing.Point(3, 3)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(88, 50)
+        Me.Button3.Size = New System.Drawing.Size(189, 36)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "FunkyBrowser"
         Me.Button3.UseVisualStyleBackColor = True
@@ -93,16 +93,16 @@ Partial Class Desktop
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(199, 214)
+        Me.Button5.Location = New System.Drawing.Point(199, 115)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(86, 51)
+        Me.Button5.Size = New System.Drawing.Size(85, 40)
         Me.Button5.TabIndex = 3
         Me.Button5.Text = "Documents"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(199, 297)
+        Me.Button4.Location = New System.Drawing.Point(197, 185)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(87, 48)
         Me.Button4.TabIndex = 2
@@ -111,9 +111,9 @@ Partial Class Desktop
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(199, 442)
+        Me.Button2.Location = New System.Drawing.Point(158, 448)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(88, 43)
+        Me.Button2.Size = New System.Drawing.Size(129, 37)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Shutdown"
         Me.Button2.UseVisualStyleBackColor = True

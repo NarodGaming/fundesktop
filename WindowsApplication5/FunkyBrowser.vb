@@ -20,4 +20,8 @@
         WebBrowser1.Refresh()
 
     End Sub
+
+    Private Sub FunkyBrowser_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Desktop.SetupClosing("Funky Browser")
+    End Sub
 End Class
