@@ -24,17 +24,27 @@ Partial Class Desktop
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Desktop))
         Me.StartPanel = New System.Windows.Forms.Panel()
-        Me.StartButton = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.StartButton = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
         Me.StartPanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'StartPanel
@@ -53,33 +63,6 @@ Partial Class Desktop
         Me.StartPanel.TabIndex = 0
         Me.StartPanel.Visible = False
         '
-        'StartButton
-        '
-        Me.StartButton.Location = New System.Drawing.Point(0, 644)
-        Me.StartButton.Name = "StartButton"
-        Me.StartButton.Size = New System.Drawing.Size(76, 41)
-        Me.StartButton.TabIndex = 1
-        Me.StartButton.Text = "Start"
-        Me.StartButton.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(286, 481)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(42, 27)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(199, 442)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(88, 43)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Shutdown"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(199, 367)
@@ -88,33 +71,6 @@ Partial Class Desktop
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "FunkyBrowser"
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(199, 297)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(87, 48)
-        Me.Button4.TabIndex = 2
-        Me.Button4.Text = "My Computer"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(199, 214)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(86, 51)
-        Me.Button5.TabIndex = 3
-        Me.Button5.Text = "Documents"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(227, 99)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(29, 13)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "User"
         '
         'PictureBox1
         '
@@ -126,13 +82,166 @@ Partial Class Desktop
         Me.PictureBox1.TabIndex = 5
         Me.PictureBox1.TabStop = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(227, 99)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(29, 13)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "User"
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(199, 214)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(86, 51)
+        Me.Button5.TabIndex = 3
+        Me.Button5.Text = "Documents"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(199, 297)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(87, 48)
+        Me.Button4.TabIndex = 2
+        Me.Button4.Text = "My Computer"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(199, 442)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(88, 43)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "Shutdown"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(286, 481)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(42, 27)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'StartButton
+        '
+        Me.StartButton.Location = New System.Drawing.Point(0, 644)
+        Me.StartButton.Name = "StartButton"
+        Me.StartButton.Size = New System.Drawing.Size(76, 41)
+        Me.StartButton.TabIndex = 1
+        Me.StartButton.Text = "Start"
+        Me.StartButton.UseVisualStyleBackColor = True
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.Panel1.Controls.Add(Me.Button14)
+        Me.Panel1.Controls.Add(Me.Button6)
+        Me.Panel1.Controls.Add(Me.Button13)
+        Me.Panel1.Controls.Add(Me.Button7)
+        Me.Panel1.Controls.Add(Me.Button12)
+        Me.Panel1.Controls.Add(Me.Button8)
+        Me.Panel1.Controls.Add(Me.Button10)
+        Me.Panel1.Controls.Add(Me.Button11)
+        Me.Panel1.Controls.Add(Me.Button9)
         Me.Panel1.Location = New System.Drawing.Point(0, 642)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1264, 42)
         Me.Panel1.TabIndex = 3
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(110, 0)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(90, 39)
+        Me.Button6.TabIndex = 0
+        Me.Button6.Text = "Button6"
+        Me.Button6.UseVisualStyleBackColor = True
+        Me.Button6.Visible = False
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(206, 0)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(90, 39)
+        Me.Button7.TabIndex = 4
+        Me.Button7.Text = "Button7"
+        Me.Button7.UseVisualStyleBackColor = True
+        Me.Button7.Visible = False
+        '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(302, 0)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(90, 39)
+        Me.Button8.TabIndex = 5
+        Me.Button8.Text = "Button8"
+        Me.Button8.UseVisualStyleBackColor = True
+        Me.Button8.Visible = False
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(398, 0)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(90, 39)
+        Me.Button9.TabIndex = 6
+        Me.Button9.Text = "Button9"
+        Me.Button9.UseVisualStyleBackColor = True
+        Me.Button9.Visible = False
+        '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(494, 0)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(90, 39)
+        Me.Button10.TabIndex = 7
+        Me.Button10.Text = "Button10"
+        Me.Button10.UseVisualStyleBackColor = True
+        Me.Button10.Visible = False
+        '
+        'Button11
+        '
+        Me.Button11.Location = New System.Drawing.Point(590, 0)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(90, 39)
+        Me.Button11.TabIndex = 8
+        Me.Button11.Text = "Button11"
+        Me.Button11.UseVisualStyleBackColor = True
+        Me.Button11.Visible = False
+        '
+        'Button12
+        '
+        Me.Button12.Location = New System.Drawing.Point(686, 0)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(90, 39)
+        Me.Button12.TabIndex = 9
+        Me.Button12.Text = "Button12"
+        Me.Button12.UseVisualStyleBackColor = True
+        Me.Button12.Visible = False
+        '
+        'Button13
+        '
+        Me.Button13.Location = New System.Drawing.Point(782, 0)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(90, 39)
+        Me.Button13.TabIndex = 10
+        Me.Button13.Text = "Button13"
+        Me.Button13.UseVisualStyleBackColor = True
+        Me.Button13.Visible = False
+        '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(878, 0)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(90, 39)
+        Me.Button14.TabIndex = 11
+        Me.Button14.Text = "Button14"
+        Me.Button14.UseVisualStyleBackColor = True
+        Me.Button14.Visible = False
         '
         'Desktop
         '
@@ -148,6 +257,7 @@ Partial Class Desktop
         Me.StartPanel.ResumeLayout(False)
         Me.StartPanel.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -162,4 +272,13 @@ Partial Class Desktop
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button14 As Button
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button13 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents Button12 As Button
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Button10 As Button
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Button9 As Button
 End Class

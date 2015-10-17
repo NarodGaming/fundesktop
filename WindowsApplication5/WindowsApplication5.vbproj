@@ -111,6 +111,9 @@
     <EmbeddedResource Include="Desktop.resx">
       <DependentUpon>Desktop.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FileBrowser.resx">
+      <DependentUpon>FileBrowser.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
