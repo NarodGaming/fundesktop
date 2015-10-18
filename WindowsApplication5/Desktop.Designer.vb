@@ -25,6 +25,7 @@ Partial Class Desktop
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Desktop))
         Me.StartPanel = New System.Windows.Forms.Panel()
+        Me.startSettings = New System.Windows.Forms.Button()
         Me.aboutButton = New System.Windows.Forms.Button()
         Me.ShutdownArrow = New System.Windows.Forms.Button()
         Me.FBrowser_btn = New System.Windows.Forms.Button()
@@ -53,7 +54,6 @@ Partial Class Desktop
         Me.TaskBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PropertiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DesktopBackground = New System.Windows.Forms.PictureBox()
-        Me.startSettings = New System.Windows.Forms.Button()
         Me.StartPanel.SuspendLayout()
         CType(Me.userPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -79,6 +79,15 @@ Partial Class Desktop
         Me.StartPanel.Size = New System.Drawing.Size(287, 485)
         Me.StartPanel.TabIndex = 0
         Me.StartPanel.Visible = False
+        '
+        'startSettings
+        '
+        Me.startSettings.Location = New System.Drawing.Point(197, 414)
+        Me.startSettings.Name = "startSettings"
+        Me.startSettings.Size = New System.Drawing.Size(90, 25)
+        Me.startSettings.TabIndex = 8
+        Me.startSettings.Text = "Settings"
+        Me.startSettings.UseVisualStyleBackColor = True
         '
         'aboutButton
         '
@@ -177,7 +186,7 @@ Partial Class Desktop
         '
         Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.BackColor = System.Drawing.SystemColors.Desktop
+        Me.Panel1.BackColor = System.Drawing.SystemColors.Highlight
         Me.Panel1.Controls.Add(Me.Time)
         Me.Panel1.Controls.Add(Me.Button14)
         Me.Panel1.Controls.Add(Me.Button6)
@@ -341,15 +350,6 @@ Partial Class Desktop
         Me.DesktopBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.DesktopBackground.TabIndex = 4
         Me.DesktopBackground.TabStop = False
-        '
-        'startSettings
-        '
-        Me.startSettings.Location = New System.Drawing.Point(197, 414)
-        Me.startSettings.Name = "startSettings"
-        Me.startSettings.Size = New System.Drawing.Size(90, 25)
-        Me.startSettings.TabIndex = 8
-        Me.startSettings.Text = "Settings"
-        Me.startSettings.UseVisualStyleBackColor = True
         '
         'Desktop
         '
