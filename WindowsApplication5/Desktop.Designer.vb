@@ -335,7 +335,7 @@ Partial Class Desktop
         Me.DesktopBackground.Image = CType(resources.GetObject("DesktopBackground.Image"), System.Drawing.Image)
         Me.DesktopBackground.Location = New System.Drawing.Point(0, 1)
         Me.DesktopBackground.Name = "DesktopBackground"
-        Me.DesktopBackground.Size = New System.Drawing.Size(1264, 650)
+        Me.DesktopBackground.Size = New System.Drawing.Size(1264, 646)
         Me.DesktopBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.DesktopBackground.TabIndex = 4
         Me.DesktopBackground.TabStop = False
