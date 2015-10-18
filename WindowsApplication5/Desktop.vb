@@ -293,6 +293,23 @@
             Else
                 AboutFunDesktopOS.Focus()
             End If
+        ElseIf ButtonText = "Settings"
+            If Settings.WindowState = FormWindowState.Minimized Then
+                Settings.WindowState = FormWindowState.Normal
+            Else
+                Settings.Focus()
+            End If
         End If
     End Function
+
+    Private Sub startSettings_Click(sender As Object, e As EventArgs) Handles startSettings.Click
+        If Settings.Visible = False Then
+            SetupTaskBar("Settings")
+            Settings.Show()
+            StartPanel.Visible = False
+            StartOpen = False
+        Else
+            Settings.Focus()
+        End If
+    End Sub
 End Class

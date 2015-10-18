@@ -53,6 +53,7 @@ Partial Class Desktop
         Me.TaskBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PropertiesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DesktopBackground = New System.Windows.Forms.PictureBox()
+        Me.startSettings = New System.Windows.Forms.Button()
         Me.StartPanel.SuspendLayout()
         CType(Me.userPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -63,6 +64,7 @@ Partial Class Desktop
         'StartPanel
         '
         Me.StartPanel.BackColor = System.Drawing.Color.Silver
+        Me.StartPanel.Controls.Add(Me.startSettings)
         Me.StartPanel.Controls.Add(Me.aboutButton)
         Me.StartPanel.Controls.Add(Me.ShutdownArrow)
         Me.StartPanel.Controls.Add(Me.FBrowser_btn)
@@ -340,6 +342,15 @@ Partial Class Desktop
         Me.DesktopBackground.TabIndex = 4
         Me.DesktopBackground.TabStop = False
         '
+        'startSettings
+        '
+        Me.startSettings.Location = New System.Drawing.Point(197, 414)
+        Me.startSettings.Name = "startSettings"
+        Me.startSettings.Size = New System.Drawing.Size(90, 25)
+        Me.startSettings.TabIndex = 8
+        Me.startSettings.Text = "Settings"
+        Me.startSettings.UseVisualStyleBackColor = True
+        '
         'Desktop
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -392,4 +403,5 @@ Partial Class Desktop
     Friend WithEvents TaskBarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PropertiesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents aboutButton As Button
+    Friend WithEvents startSettings As Button
 End Class
