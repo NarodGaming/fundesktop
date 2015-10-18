@@ -36,6 +36,7 @@ Partial Class FunkyBrowser
         Me.WebBrowser1.Location = New System.Drawing.Point(0, 38)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.ScriptErrorsSuppressed = True
         Me.WebBrowser1.Size = New System.Drawing.Size(1054, 557)
         Me.WebBrowser1.TabIndex = 0
         '
@@ -71,7 +72,7 @@ Partial Class FunkyBrowser
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(680, 20)
         Me.TextBox1.TabIndex = 4
-        Me.TextBox1.Text = "http://google.com"
+        Me.TextBox1.Text = "http://www.google.com"
         '
         'Button3
         '
@@ -104,7 +105,7 @@ Partial Class FunkyBrowser
         Me.Controls.Add(Me.WebBrowser2)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Name = "FunkyBrowser"
-        Me.Text = "FunkyBrowser"
+        Me.Text = "Funky Browser"
         Me.TopMost = True
         Me.ResumeLayout(False)
         Me.PerformLayout()

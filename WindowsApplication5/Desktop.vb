@@ -152,6 +152,7 @@
     Public Function RollbackTaskbar(ByVal buttonrolledback As Integer)
         If buttonrolledback = 6 Then
             Button6.Visible = False
+            ButtonOn = 6
         End If
         If buttonrolledback = 7 Then
             Button7.Visible = False
@@ -269,13 +270,29 @@
 
     Public Function FocusWindow(ByVal ButtonText As String, ByVal Button As Integer)
         If ButtonText = "File Browser" Then
-            FileBrowser.Focus()
+            If FileBrowser.WindowState = FormWindowState.Minimized Then
+                FileBrowser.WindowState = FormWindowState.Normal
+            Else
+                FileBrowser.Focus()
+            End If
         ElseIf ButtonText = "Funky Browser"
-            FunkyBrowser.Focus
+            If FunkyBrowser.WindowState = FormWindowState.Minimized Then
+                FunkyBrowser.WindowState = FormWindowState.Normal
+            Else
+                FunkyBrowser.Focus()
+            End If
         ElseIf ButtonText = "Task Manager"
-            TaskManager.Focus()
+            If TaskManager.WindowState = FormWindowState.Minimized Then
+                TaskManager.WindowState = FormWindowState.Normal
+            Else
+                TaskManager.Focus()
+            End If
         ElseIf ButtonText = "About"
-            AboutFunDesktopOS.Focus()
+            If AboutFunDesktopOS.WindowState = FormWindowState.Minimized Then
+                AboutFunDesktopOS.WindowState = FormWindowState.Normal
+            Else
+                AboutFunDesktopOS.Focus()
+            End If
         End If
     End Function
 End Class
