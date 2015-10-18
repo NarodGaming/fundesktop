@@ -230,4 +230,52 @@
             AboutFunDesktopOS.Focus()
         End If
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        FocusWindow(Button6.Text, 6)
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        FocusWindow(Button7.Text, 7)
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        FocusWindow(Button8.Text, 8)
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        FocusWindow(Button9.Text, 9)
+    End Sub
+
+    Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
+        FocusWindow(Button10.Text, 10)
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        FocusWindow(Button11.Text, 11)
+    End Sub
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        FocusWindow(Button12.Text, 12)
+    End Sub
+
+    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
+        FocusWindow(Button13.Text, 13)
+    End Sub
+
+    Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Button14.Click
+        FocusWindow(Button14.Text, 14)
+    End Sub
+
+    Public Function FocusWindow(ByVal ButtonText As String, ByVal Button As Integer)
+        If ButtonText = "File Browser" Then
+            FileBrowser.Focus()
+        ElseIf ButtonText = "Funky Browser"
+            FunkyBrowser.Focus
+        ElseIf ButtonText = "Task Manager"
+            TaskManager.Focus()
+        ElseIf ButtonText = "About"
+            AboutFunDesktopOS.Focus()
+        End If
+    End Function
 End Class
