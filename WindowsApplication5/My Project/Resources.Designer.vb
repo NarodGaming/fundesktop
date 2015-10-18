@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property alienware_ui___for_windows_7_by_mvgraphics() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("alienware_ui___for_windows_7_by_mvgraphics", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property guestIcon() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("guestIcon", resourceCulture)
