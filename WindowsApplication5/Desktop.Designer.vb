@@ -31,7 +31,6 @@ Partial Class Desktop
         Me.FBrowser_btn = New System.Windows.Forms.Button()
         Me.userPhoto = New System.Windows.Forms.PictureBox()
         Me.userName = New System.Windows.Forms.Label()
-        Me.myDocuments_btn = New System.Windows.Forms.Button()
         Me.myComputer_btn = New System.Windows.Forms.Button()
         Me.shutdownButton = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -70,7 +69,6 @@ Partial Class Desktop
         Me.StartPanel.Controls.Add(Me.FBrowser_btn)
         Me.StartPanel.Controls.Add(Me.userPhoto)
         Me.StartPanel.Controls.Add(Me.userName)
-        Me.StartPanel.Controls.Add(Me.myDocuments_btn)
         Me.StartPanel.Controls.Add(Me.myComputer_btn)
         Me.StartPanel.Controls.Add(Me.shutdownButton)
         Me.StartPanel.Controls.Add(Me.Button1)
@@ -135,23 +133,16 @@ Partial Class Desktop
         Me.userName.TabIndex = 4
         Me.userName.Text = "User"
         '
-        'myDocuments_btn
-        '
-        Me.myDocuments_btn.Location = New System.Drawing.Point(197, 128)
-        Me.myDocuments_btn.Name = "myDocuments_btn"
-        Me.myDocuments_btn.Size = New System.Drawing.Size(85, 40)
-        Me.myDocuments_btn.TabIndex = 3
-        Me.myDocuments_btn.Text = "Documents"
-        Me.myDocuments_btn.UseVisualStyleBackColor = True
-        '
         'myComputer_btn
         '
-        Me.myComputer_btn.Location = New System.Drawing.Point(197, 185)
+        Me.myComputer_btn.Enabled = False
+        Me.myComputer_btn.Location = New System.Drawing.Point(197, 337)
         Me.myComputer_btn.Name = "myComputer_btn"
         Me.myComputer_btn.Size = New System.Drawing.Size(87, 48)
         Me.myComputer_btn.TabIndex = 2
         Me.myComputer_btn.Text = "My Computer"
         Me.myComputer_btn.UseVisualStyleBackColor = True
+        Me.myComputer_btn.Visible = False
         '
         'shutdownButton
         '
@@ -380,7 +371,6 @@ Partial Class Desktop
     Friend WithEvents Button1 As Button
     Friend WithEvents userPhoto As PictureBox
     Friend WithEvents userName As Label
-    Friend WithEvents myDocuments_btn As Button
     Friend WithEvents myComputer_btn As Button
     Friend WithEvents FBrowser_btn As Button
     Friend WithEvents Panel1 As Panel

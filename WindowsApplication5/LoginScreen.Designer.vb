@@ -26,7 +26,7 @@ Partial Class LoginScreen
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txt_Username = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ButtonShutdown = New System.Windows.Forms.Button()
@@ -70,16 +70,16 @@ Partial Class LoginScreen
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Password"
         '
-        'Label3
+        'txt_Username
         '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label3.AutoSize = True
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(137, 241)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(29, 13)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "User"
+        Me.txt_Username.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.txt_Username.AutoSize = True
+        Me.txt_Username.ForeColor = System.Drawing.SystemColors.Control
+        Me.txt_Username.Location = New System.Drawing.Point(137, 241)
+        Me.txt_Username.Name = "txt_Username"
+        Me.txt_Username.Size = New System.Drawing.Size(29, 13)
+        Me.txt_Username.TabIndex = 3
+        Me.txt_Username.Text = "User"
         '
         'TextBox1
         '
@@ -117,7 +117,7 @@ Partial Class LoginScreen
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.txt_Username)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.TextBox1)
@@ -150,7 +150,7 @@ Partial Class LoginScreen
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
+    Friend WithEvents txt_Username As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents ButtonShutdown As Button

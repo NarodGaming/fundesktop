@@ -191,6 +191,9 @@
     Private Sub Desktop_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.FormBorderStyle = FormBorderStyle.None
         Me.WindowState = FormWindowState.Maximized
+
+        userName.Text = My.Settings.Username
+
     End Sub
 
     Private Sub DesktopBackground_Click(sender As Object, e As EventArgs) Handles DesktopBackground.Click
