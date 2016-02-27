@@ -17,6 +17,7 @@
             ListBox1.Items.Add("explorer_settings.prg")
         End If
         ListBox1.Items.Add("explorer_desktop.prg")
+        ListBox1.Items.Add("taskmgr.prg")
     End Sub
 
     Private Sub updateList_Tick(sender As Object, e As EventArgs) Handles updateList.Tick
@@ -34,6 +35,7 @@
             ListBox1.Items.Add("explorer_settings.prg")
         End If
         ListBox1.Items.Add("explorer_desktop.prg")
+        ListBox1.Items.Add("taskmgr.prg")
     End Sub
 
     Private Sub btnKill_Click(sender As Object, e As EventArgs) Handles btnKill.Click
@@ -49,6 +51,11 @@
         ElseIf ListBox1.SelectedItem = "explorer_settings.prg"
             Settings.Close()
             ListBox1.Items.Remove(ListBox1.SelectedItem)
+        ElseIf ListBox1.SelectedItem = "taskmgr.prg"
+            Me.Close
+        ElseIf ListBox1.SelectedItem = "explorer_desktop.prg"
+            MsgBox("Error occurred in values 0x0000 and 0x0001, Task Manager will now be closed to prevent a system crash.", MsgBoxStyle.Critical, "conhost.exe - FunDesktop Critical Error")
+            Me.Close()
         End If
     End Sub
 End Class

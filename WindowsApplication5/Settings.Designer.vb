@@ -40,6 +40,9 @@ Partial Class Settings
         Me.txtBox_oldpass = New System.Windows.Forms.TextBox()
         Me.txtBox_newpass1 = New System.Windows.Forms.TextBox()
         Me.txtBox_newpass2 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -141,7 +144,7 @@ Partial Class Settings
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(520, 371)
+        Me.Label9.Location = New System.Drawing.Point(492, 371)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(161, 13)
         Me.Label9.TabIndex = 10
@@ -204,11 +207,36 @@ Partial Class Settings
         Me.txtBox_newpass2.TabIndex = 17
         Me.txtBox_newpass2.UseSystemPasswordChar = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(199, 477)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(99, 50)
+        Me.Button3.TabIndex = 18
+        Me.Button3.Text = "Change"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        Me.OpenFileDialog1.Filter = "Image Files|*.*"
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(119, 366)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 20
+        Me.Button5.Text = "Clear"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(747, 539)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.txtBox_newpass2)
         Me.Controls.Add(Me.txtBox_newpass1)
         Me.Controls.Add(Me.txtBox_oldpass)
@@ -258,4 +286,7 @@ Partial Class Settings
     Friend WithEvents txtBox_oldpass As TextBox
     Friend WithEvents txtBox_newpass1 As TextBox
     Friend WithEvents txtBox_newpass2 As TextBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents Button5 As Button
 End Class

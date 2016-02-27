@@ -27,4 +27,14 @@
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txt_Username.Text = ("Current Username: " & My.Settings.Username)
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        OpenFileDialog1.ShowDialog()
+        My.Settings.Custom_Background_Location = OpenFileDialog1.FileName
+        Desktop.DesktopBackground.ImageLocation = My.Settings.Custom_Background_Location
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        My.Settings.Custom_Background_Location = Nothing
+    End Sub
 End Class

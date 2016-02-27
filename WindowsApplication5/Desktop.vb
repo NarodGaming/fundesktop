@@ -14,10 +14,6 @@
 
     End Sub
 
-    Private Sub StartPanel_Paint(sender As Object, e As PaintEventArgs) Handles StartPanel.Paint
-
-    End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles shutdownButton.Click
         Application.Exit()
 
@@ -194,6 +190,7 @@
 
         userName.Text = My.Settings.Username
 
+        DesktopBackground.ImageLocation = My.Settings.Custom_Background_Location
     End Sub
 
     Private Sub DesktopBackground_Click(sender As Object, e As EventArgs) Handles DesktopBackground.Click

@@ -92,13 +92,13 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
-        Public Property Custom_Loginscreen_Choice() As Integer
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Custom_Loginscreen_Location() As String
             Get
-                Return CType(Me("Custom_Loginscreen_Choice"),Integer)
+                Return CType(Me("Custom_Loginscreen_Location"),String)
             End Get
             Set
-                Me("Custom_Loginscreen_Choice") = value
+                Me("Custom_Loginscreen_Location") = value
             End Set
         End Property
     End Class
